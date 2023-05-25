@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../global.dart';
+import '../globals.dart';
 class TodoEntryPage extends StatefulWidget {
   @override
   TodoEntryPageState createState() => TodoEntryPageState();

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../global.dart';
+import '../globals.dart';
+
 class TodoListPage extends StatefulWidget {
   @override
   TodoListPageState createState() => TodoListPageState();
@@ -87,10 +88,18 @@ class TodoListPageState extends State<TodoListPage> {
                       children: [
                         TextField(
                             controller: titleTextController,
-                            decoration: InputDecoration(labelText: "title")),
+                            decoration: InputDecoration(
+                                labelText: "title",
+                                errorText: _validateTitleTextField
+                                    ? "Please enter some text"
+                                    : null)),
                         TextField(
                             controller: subtitleTextController,
-                            decoration: InputDecoration(labelText: "subtitle")),
+                            decoration: InputDecoration(
+                                labelText: "subtitle",
+                                errorText: _validateTitleTextField
+                                    ? "Please enter some text"
+                                    : null)),
                         Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
